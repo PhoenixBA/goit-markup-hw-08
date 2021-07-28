@@ -77,15 +77,15 @@ body {
     line-height: 1.9;
     letter-spacing: 0.06em;
 }
-.business-button:hover {
+.business-button :hover {
     color: var(--white-title-color);
     background-color: var(--second-accent-color);
 }
-.button-primary:focus {
+.button-primary :focus {
     color: var(--white-title-color);
     background-color: var(--accent-color);
 }
-.button-primary:hover {
+.button-primary :hover {
     color: var(--white-title-color);
     background-color: var(--accent-color);
 }
