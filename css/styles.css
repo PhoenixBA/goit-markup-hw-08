@@ -1,31 +1,26 @@
 /*цвет основного текста #212121*/
-
-
 /*цвет вторичного текста #757575*/
-
-
-/*цвет основного фона #E5E5E5*/
-
+/*цвет основного фона #FFFFFF*/
 /*цвет вторичного фона #F5F4FA*/
-
 /*цвет футера и полосы кнопки #2F303A*/ 
-
-/*цвет шапки белый #FFFFFF*/
-
 /*акцент #2196F3*/
-
+/*второй акцент #188CE8*/
 
 :root {
     --primary-text-color: #212121;
     --title-text-color: #757575;
+    --logo-text-color: #000000;
     --accent-color: #2196F3;
+    --second-accent-color: #188CE8;
     --white-title-color: #FFFFFF;
+    --second-title-color: #F5F4FA;
+    --footer-accent-color: #2F303A;
 }
 
 body {
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
-    background-color: #FFFFFF;
+    background-color: var(--white-title-color);
     color: var(--primary-text-color);
 }
 /*Шапка*/
@@ -37,8 +32,8 @@ body {
 }
 /*Лого*/
 .logo {
-    color: var(--primary-text-color);
-    font-family: Raleway, cursive;
+    color: var(--logo-text-color);
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -48,24 +43,22 @@ body {
 }
 .footer-logo {
     color: var(--white-title-color);
-    font-family: Raleway, cursive;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
 }
 /*Фильтр*/
 .button-primary {
-    color :var(--primary-text-color);
+    color: var(--primary-text-color);
     cursor: pointer;
-    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
 }
 .nav-link {
-    color :var(--primary-text-color);
+    color: var(--primary-text-color);
     cursor: pointer;
-    font-family: inherit;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -77,33 +70,33 @@ body {
     
 }
 .business-button {
-    color: var(--primary-text-color);
-    font-family: inherit;
+    color: var(--white-title-color);
+    background-color: var(--accent-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
 }
-.business-button, 
+.business-button:hover {
+    color: var(--white-title-color);
+    background-color: var(--second-accent-color);
+}
 .button-primary:focus {
-    color :var(--white-title-color);
+    color: var(--white-title-color);
     background-color: var(--accent-color);
 }
-
-.business-button, 
 .button-primary:hover {
-    color :var(--white-title-color);
+    color: var(--white-title-color);
     background-color: var(--accent-color);
 }
-.business-button, 
+ 
 .button-primary :active{
-    color :var(--white-title-color);
+    color: var(--white-title-color);
     background-color: var(--accent-color);
 } 
 /*Подвал и Шапка*/
 .contact, a {
     color: var(--title-text-color);
-    font-family: inherit;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -128,7 +121,6 @@ body {
 /*Линия с кнопкой*/
 .business-title {
     color: var(--white-title-color);
-    font-family: inherit;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;  
@@ -137,37 +129,33 @@ body {
     text-transform: uppercase;
 }
 .section-business {
-    background-color: #2F303A;
+    background-color: var(--footer-accent-color);
     text-align: center;
 }
 /*Особенности*/
 .special-title {
     color: var(--primary-text-color);
-    font-family: inherit;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
 }
 .special-text {
     color: var(--title-text-color);
-    font-family:inherit;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
 }
-/*Портфолио*/
+/*Герой*/
 .section-title {
     color: var(--primary-text-color);
-    font-family: inherit;
-font-weight: 700;
-font-size: 18px;
-line-height: 2;
-letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
 
 }
 .section-text {
     color: var(--title-text-color);
-    font-family: inherit;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
@@ -175,7 +163,6 @@ letter-spacing: 0.06em;
 /*Чем мы занимаемся*/
 .work-title {
     color: var(--primary-text-color);
-    font-family: inherit;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -184,7 +171,6 @@ letter-spacing: 0.06em;
 /*Наша команда*/
 .team-title {
     color: var(--primary-text-color);
-    font-family: inherit;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -192,14 +178,12 @@ letter-spacing: 0.06em;
 }
 .team-name {
     color: var(--primary-text-color);
-    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
 }
 .team-position {
     color: var(--title-text-color);
-    font-family: inherit;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
@@ -207,14 +191,12 @@ letter-spacing: 0.06em;
 /*подвал*/
 .address {
     color: var(--white-title-color);
-    font-family: inherit;
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
 }
 .footer {
-    background-color: #2F303A;
+    background-color: var(--footer-accent-color);
 }
 
 
