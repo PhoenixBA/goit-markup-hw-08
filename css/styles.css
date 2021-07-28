@@ -39,12 +39,24 @@ body {
 .logo {
     color: var(--primary-text-color);
     font-family: Raleway, cursive;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+.web-logo {
+    color: var(--accent-color);
+}
+.footer-logo {
+    color: var(--white-title-color);
+    font-family: Raleway, cursive;
+    font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
 }
 /*Фильтр*/
 .button-primary {
     color :var(--primary-text-color);
+    cursor: pointer;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -52,6 +64,7 @@ body {
 }
 .nav-link {
     color :var(--primary-text-color);
+    cursor: pointer;
     font-family: inherit;
     font-weight: 500;
     font-size: 14px;
@@ -61,6 +74,7 @@ body {
 .nav-link:active { 
     color: var(--white-title-color);
     background-color: var(--accent-color);
+    
 }
 .business-button {
     color: var(--primary-text-color);
@@ -109,6 +123,9 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+.section-business {
+    background-color: #2F303A;
 }
 /*Особенности*/
 .special-title {
@@ -182,6 +199,8 @@ letter-spacing: 0.06em;
     font-size: 14px;
     line-height: 1.7;
 }
-
+.footer {
+    background-color: #2F303A;
+}
 
 
