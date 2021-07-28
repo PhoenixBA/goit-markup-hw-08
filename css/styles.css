@@ -25,7 +25,7 @@
 body {
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
-    background-color: #E5E5E5;
+    background-color: #FFFFFF;
     color: var(--primary-text-color);
 }
 /*Шапка*/
@@ -71,7 +71,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.nav-link:active { 
+.nav-links :active { 
     color: var(--white-title-color);
     background-color: var(--accent-color);
     
@@ -104,17 +104,29 @@ body {
 .contact, a {
     color: var(--title-text-color);
     font-family: inherit;
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.contact, a:hover, 
-.contact, a:focus {
+.contact :hover {
+    color: var(--accent-color);
+}
+.nav-links :hover {
+    color: var(--accent-color);
+}
+.contact :focus {
+    color: var(--accent-color);
+}
+.nav-links :focus {
+    color: var(--accent-color);
+}
+.nav-links .current {
     color: var(--accent-color);
 }
 /*Линия с кнопкой*/
-.section-business-title {
+.business-title {
     color: var(--white-title-color);
     font-family: inherit;
     font-weight: 900;
@@ -126,6 +138,7 @@ body {
 }
 .section-business {
     background-color: #2F303A;
+    text-align: center;
 }
 /*Особенности*/
 .special-title {
@@ -195,6 +208,7 @@ letter-spacing: 0.06em;
 .address {
     color: var(--white-title-color);
     font-family: inherit;
+    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
@@ -202,5 +216,6 @@ letter-spacing: 0.06em;
 .footer {
     background-color: #2F303A;
 }
+
 
 
