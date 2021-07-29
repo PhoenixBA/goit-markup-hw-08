@@ -5,6 +5,7 @@
 /*цвет футера и полосы кнопки #2F303A*/ 
 /*акцент #2196F3*/
 /*второй акцент #188CE8*/
+/*футер текст  rgba(255, 255, 255, 0.6)*/
 
 :root {
     --primary-text-color: #212121;
@@ -15,7 +16,9 @@
     --white-title-color: #FFFFFF;
     --second-title-color: #F5F4FA;
     --footer-accent-color: #2F303A;
+    --foter-text-color: rgba(255, 255, 255, 0.6);
 }
+
 
 body {
     font-family: Roboto, sans-serif;
@@ -23,6 +26,7 @@ body {
     background-color: var(--white-title-color);
     color: var(--primary-text-color);
 }
+
 /*Шапка*/
  a {
     text-decoration: none;
@@ -64,7 +68,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.nav-links :active { 
+.nav-links:active { 
     color: var(--white-title-color);
     background-color: var(--accent-color);
     
@@ -77,25 +81,19 @@ body {
     line-height: 1.9;
     letter-spacing: 0.06em;
 }
-.business-button :hover {
-    color: var(--white-title-color);
+.business-button:hover,
+.business-button:focus {
     background-color: var(--second-accent-color);
 }
-.button-primary :focus {
+.button-primary:focus,
+.button-primary:hover,
+.button-primary:active {
     color: var(--white-title-color);
     background-color: var(--accent-color);
 }
-.button-primary :hover {
-    color: var(--white-title-color);
-    background-color: var(--accent-color);
-}
- 
-.button-primary :active{
-    color: var(--white-title-color);
-    background-color: var(--accent-color);
-} 
+
 /*Подвал и Шапка*/
-.contact, a {
+.contact a {
     color: var(--title-text-color);
     font-style: normal;
     font-weight: 500;
@@ -103,21 +101,16 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.contact :hover {
+.contact:hover,
+.contact:focus {
     color: var(--accent-color);
 }
-.nav-links :hover {
-    color: var(--accent-color);
-}
-.contact :focus {
-    color: var(--accent-color);
-}
-.nav-links :focus {
-    color: var(--accent-color);
-}
+.nav-links:hover,
+.nav-links:focus,
 .nav-links .current {
     color: var(--accent-color);
 }
+ 
 /*Линия с кнопкой*/
 .business-title {
     color: var(--white-title-color);
@@ -135,6 +128,7 @@ body {
 /*Особенности*/
 .special-title {
     color: var(--primary-text-color);
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -169,6 +163,9 @@ body {
     text-align: center;
 }
 /*Наша команда*/
+.section-team {
+    background-color: var(--second-title-color);
+}
 .team-title {
     color: var(--primary-text-color);
     font-weight: 700;
@@ -191,7 +188,13 @@ body {
 /*подвал*/
 .address {
     color: var(--white-title-color);
+    font-style: normal;
     font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.footer-contact a {
+    color: var(--foter-text-color);
     font-size: 14px;
     line-height: 1.7;
 }
