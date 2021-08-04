@@ -333,6 +333,7 @@ img {
 }
 .section-team {
     background-color: var(--second-title-color);
+    margin-top: 94px;
 }
 .team-title {
     color: var(--primary-text-color);
@@ -361,6 +362,7 @@ img {
     text-align: center;
 }
 .team-content {
+    background-color: var(--white-title-color);
     padding: 30px;
 }
 .card {
