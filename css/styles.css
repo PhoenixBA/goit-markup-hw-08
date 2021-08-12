@@ -287,10 +287,6 @@ img {
     margin-right: 30px;
     margin-bottom: 30px;
 }
-.card-section {
-    width: var(--card-width);
-    
-}
 
 .section-title {
     margin-bottom: 4px;
@@ -385,8 +381,8 @@ img {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 9px;
-    margin-top: 20px;
 }
+
 .address-contact a {
     color: var(--foter-text-color);
     font-style: normal;
@@ -409,6 +405,7 @@ img {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    margin: 20px 0;
+    margin-bottom: 20px;
+    display: block;
 }
 
