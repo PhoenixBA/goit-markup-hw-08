@@ -572,7 +572,7 @@ img {
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
-    background-image: url(./images/symbol-defs.svg);
+    
 }
 .footer-social:not(:last-child) {
     margin-right: 10px;
