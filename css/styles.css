@@ -3,7 +3,7 @@
 /*цвет основного фона #FFFFFF*/
 /*цвет вторичного фона #F5F4FA*/
 /*цвет футера и полосы кнопки #2F303A*/ 
-/*акцент #2196F3*/
+/*акцент #2196F3*/ 
 /*второй акцент #188CE8*/
 /*футер текст  rgba(255, 255, 255, 0.6)*/
 /*цвет фона карточек 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2)*/
@@ -58,6 +58,7 @@ ul {
 img {
     display: block;
 }
+
 /*Контейнер*/
 .container {
     width: 1200px;
@@ -117,12 +118,7 @@ img {
 .business-button:focus {
     background-color: var(--second-accent-color);
 }
-.button-primary:focus,
-.button-primary:hover,
-.button-primary:active {
-    color: var(--white-title-color);
-    background-color: var(--accent-color);
-}
+
 
 /*Подвал и Шапка*/
 .section-header {
@@ -156,8 +152,6 @@ img {
     margin-right: 50px;
 }
 .contact a {
-    
-   
     color: var(--title-text-color);
     font-style: normal;
     font-weight: 500;
@@ -166,8 +160,8 @@ img {
     letter-spacing: 0.02em;
 }
 
-.contact:hover,
-.contact:focus {
+.contact a:hover,
+.contact a:focus {
     color: var(--accent-color);
 }
 .nav-links:hover,
@@ -193,7 +187,23 @@ img {
     background-color: var(--footer-accent-color);
     text-align: center;
     padding: 200px 0;
+}
+
+.section-business {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Img6.jpg);  
 }
 /*Особенности*/
 .visually-hidden {
@@ -242,6 +252,7 @@ img {
     font-size: 14px;
     line-height: 1.7;
 }
+
 /*Герой*/
 .button-primary {
     border-radius: 4px;
@@ -251,8 +262,14 @@ img {
     cursor: pointer;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.6;
-    
+    line-height: 1.6;   
+} 
+.button-primary:focus,
+.button-primary:hover,
+.button-primary:active {
+    color: var(--white-title-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
 }
 .section { 
     padding: 94px 0;
@@ -286,8 +303,13 @@ img {
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
+    
 }
-
+.gero-card:focus,
+.gero-card:hover {
+    outline: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .section-title {
     margin-bottom: 4px;
     color: var(--primary-text-color);
@@ -343,6 +365,10 @@ img {
     box-shadow: var(--card-shadow);
     border-radius: 0px 0px 4px 4px;
 }
+.team-card :focus,
+.team-card :hover {
+    box-shadow: var(--card-shadow);
+}
 .team-title {
     color: var(--primary-text-color);
     font-weight: 700;
@@ -372,8 +398,28 @@ img {
     background-color: var(--white-title-color);
     padding: 30px;
 }
+/*Постоянные клиенты*/
+.section-client {
+    padding: 94px 0;
+}
+.client-list {
+    display: flex;
+    padding-left: 0;
+}
 
-/*подвал*/
+.client-icon:not(:last-child) {
+    margin-right: 30px;
+}
+.client-title {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+/*Подвал*/
 .address {
     color: var(--white-title-color);
     font-style: normal;
@@ -408,4 +454,132 @@ img {
     margin-bottom: 20px;
     display: block;
 }
+/*Icon*/
+.special-icon {
+    width: 270px;
+    height: 120px;
+    background-color: var(--second-title-color);
+    padding: 0px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-link:hover .envelope,
+.contact-link:focus .envelope {
+    fill: var(--accent-color); 
+}
+.contact-link:hover .smartphone,
+.contact-link:focus .smartphone {
+    fill: var(--accent-color);
+    
+}
+.envelope {
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    fill: var(--title-text-color);
+    
+}
+.smartphone {
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    fill: var(--title-text-color);
+    
+}
 
+.team-icon {
+    display: flex;
+    padding: 0;
+    
+}
+.icon-set {
+    width: 44px;
+    height: 44px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.icon-set:not(:last-child) {
+    margin-right: 10px;
+}
+.icon-set:focus, 
+.icon-set:hover {
+    background-color: var(--accent-color);
+}
+.instagram, .twitter, .facebook, .linkedin,
+.Logo1, .Logo2, .Logo3, .Logo4, .Logo5, .Logo6 {
+    fill: #AFB1B8;
+}
+
+.icon-set:focus svg,
+.icon-set:hover svg {
+    fill: var(--white-title-color);
+}
+.client-icon {
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    width: 270px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.client-icon:hover,
+.client-icon:focus {
+    border-color: var(--accent-color);
+}
+.client-icon:focus svg,
+.client-icon:hover svg {
+    fill: var(--accent-color);
+}
+.section-footer .container{
+    display: flex;
+    align-items: baseline;
+}
+.footer-bloc {
+    padding: 0;
+    margin-left: 70px;
+}
+.footer-title {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+.footer-icon {
+    display: flex;
+    padding: 0;
+
+}
+
+.footer-social {
+    width: 44px;
+    height: 44px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.1);;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.footer-social:not(:last-child) {
+    margin-right: 10px;
+}
+.footer-social:hover,
+.footer-social:focus {
+    background-color: var(--accent-color);
+}
+.social-icon-footer svg {
+    fill: var(--white-title-color);
+}
