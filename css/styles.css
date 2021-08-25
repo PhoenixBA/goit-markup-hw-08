@@ -351,31 +351,18 @@ img {
     position: relative;
     overflow: hidden;
 }
-.gero-thumb::before{
-    display: inline-block;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform var(--time-function);
-}
-.gero-thumb:hover::before {
+.gero-link:hover .gero-text {
     opacity: 1;
     transform: translateY(0);
 }
-.gero-thumb:hover .gero-text {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 .gero-text {
     position: absolute;
     top: 0;
     opacity: 0;
+    bottom: 0;
     padding: 63px 24px;
-    display: flex;
+    display: inline-block;
     font-family: inherit;
     font-style: normal;
     font-weight: 400;
@@ -383,6 +370,8 @@ img {
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: var(--white-title-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    
     transform: translateY(100%);
     transition: transform var(--time-function);
     overflow: hidden;
@@ -777,9 +766,25 @@ img {
 
 }
 
+
 /*.gero-thumb {
     position: relative;
     overflow: hidden;
+}
+.gero-thumb::before{
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform var(--time-function);
+}
+.gero-thumb:hover::before {
+    opacity: 1;
+    transform: translateY(0);
 }
 .gero-thumb:hover .gero-text {
     opacity: 1;
@@ -789,9 +794,8 @@ img {
     position: absolute;
     top: 0;
     opacity: 0;
-
     padding: 63px 24px;
-    display: inline-block;
+    display: flex;
     font-family: inherit;
     font-style: normal;
     font-weight: 400;
@@ -799,8 +803,6 @@ img {
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: var(--white-title-color);
-    background-color: rgba(33, 150, 243, 0.9);
-    
     transform: translateY(100%);
     transition: transform var(--time-function);
     overflow: hidden;
