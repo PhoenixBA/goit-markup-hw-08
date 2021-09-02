@@ -903,7 +903,7 @@ img {
 }
 .form-icon {
     position: absolute;
-    top: 50%;
+    bottom: 21px;
     left: 12px;
     display: inline-block;
     transition: fill var(--time-function);
