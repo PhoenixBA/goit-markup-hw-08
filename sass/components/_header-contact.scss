@@ -1,0 +1,52 @@
+.header-contact {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+}
+.header-contact__item:not(:last-child) {
+    margin-right: 50px;
+}
+.header-contact__link {
+    color: $title-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+
+    transition: color $time-function;
+
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+}
+
+.header-contact__item:hover .header-contact__envelope,
+.header-contact__item:focus .header-contact__envelope {
+    fill: $accent-color;
+}
+.header-contact__item:hover .header-contact__smartphone,
+.header-contact__item:focus .header-contact__smartphone {
+    fill: $accent-color;
+}
+.header-contact__envelope {
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    fill: $title-text-color;
+    
+    transition: fill $time-function;
+}
+.header-contact__smartphone {
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    fill: $title-text-color;
+    
+    transition: fill $time-function;
+}

@@ -1,0 +1,114 @@
+.section-footer .container{
+    display: flex;
+    align-items: baseline;
+}
+.section-footer {
+    background-color: $footer-accent-color;
+    padding: 60px 0;
+}
+
+.footer-bloc {
+    padding: 0;
+    margin-left: 70px;
+}
+
+.footer-bloc__title {
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: $white-title-color;
+}
+.footer-bloc__set {
+    display: flex;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.footer-bloc__item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.1);;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color $time-function;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+/*.footer-bloc__item:hover,
+.footer-bloc__item:focus {
+    background-color: $accent-color;
+}*/
+.footer-bloc__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bloc__link svg {
+    fill: $white-title-color;
+}
+
+.footer-thumb {
+    display: flex;
+}
+
+.footer-thumb__input {
+    width: 358px;
+    height: 50px;
+    margin-top: 20px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: $footer-accent-color;
+    color: $white-title-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+}
+.footer-thumb__button {
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    
+    background-color: $accent-color;
+    color: $white-title-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: $time-function;
+
+    &:hover {
+        background-color: $second-accent-color;
+    }
+}
+/*.footer-thumb__button:hover {
+    background-color: $second-accent-color;
+}*/
+
+.footer-thumb__send {
+    margin-left: 10px;
+}

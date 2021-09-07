@@ -1,0 +1,251 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opacity $time-function,
+    visibility $time-function;
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.backdrop.is-hidden .modal {
+    transform: translate(-50px, -50px) scale(1.2);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $time-function;
+    width: 528px;
+    height: 581px;
+    
+    background-color: $white-title-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+}
+.modal-button__close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    
+
+    background-color: $white-title-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+
+    transition: fill $time-function,
+    visibility $time-function;
+
+    &:focus,
+    &:hover {
+    fill: $accent-color;
+    }
+}
+
+.modal__title {
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding-left: 40px;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+
+    color: $primary-text-color;
+}
+.form-bloc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 41px;
+    margin-right: 39px;
+}
+.form-bloc__field {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.form-bloc__input {
+    
+    height: 40px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    padding: 11px 12px 11px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font: inherit;
+    outline: none;
+
+    transition: border-color $time-function;
+}    
+
+.form-bloc__label {
+    position: absolute;
+    
+    margin-bottom: 4px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+
+    color: $title-text-color;
+    transition: color $time-function;
+}
+
+.form-bloc__icon {
+    position: absolute;
+
+    bottom: 21px;
+    left: 12px;
+    display: inline-block;
+    transition: fill $time-function;
+}
+
+.form-bloc__input:focus + .form-bloc__label {
+    color: $accent-color;
+
+}
+.form-bloc__input:focus {
+    border-color: $accent-color;
+}
+.form-bloc__input:focus ~ .form-bloc__icon {
+    fill: $accent-color;
+}
+
+.form-bloc__comment {
+    position: relative;
+    height: 120px;
+    padding: 12px 16px;
+    margin-top: 18px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+
+    transition: border-color $time-function;
+}
+
+.form-bloc__comment:focus + .form-bloc__label {
+    color: $accent-color;
+}
+
+.form-bloc__comment:focus {
+    border-color: $accent-color;
+}
+
+.form-bloc__comment::placeholder {
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-policy {
+    
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-policy:focus-within .form-policy__icon{
+    opacity: 1;
+}
+
+.form-policy:focus-within .form-policy__check{
+    opacity: 0;
+}
+
+.form-policy__icon {
+    position: absolute;
+    opacity: 0;
+    
+    margin-left: 13px;
+    transition: opacity $time-function;
+}
+
+.form-policy__checkbox {
+     appearance: none;
+}
+
+.form-policy__check {
+    
+    width: 16px;
+    height: 15px;
+    margin-left: 13px;
+    border: 2px solid $primary-text-color;
+}
+
+.form-policy__text {
+    
+    margin-left: 8px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}
+
+.form-policy__link {
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+    color: $accent-color;
+}
+
+.modal__button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 40px;
+    
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    border: transparent;
+    padding: 10px 55px 10px 56px;
+    color: $white-title-color;
+    background-color: $accent-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    border: none;
+
+    transition: background-color $time-function;
+
+}
+
+.modal__button:hover,
+.modal__button:focus {
+    background-color: $second-accent-color;
+    
+}

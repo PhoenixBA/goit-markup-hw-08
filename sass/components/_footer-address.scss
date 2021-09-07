@@ -1,0 +1,32 @@
+.footer-address__logo {
+    color: $white-title-color;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.footer-address__text {
+    color: $white-title-color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 9px;
+}
+
+.footer-address__link {
+    color: $foter-text-color;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.footer-address__contact {
+    padding: 0;
+}
+
+.footer-address__item:not(:last-child) {
+    margin-bottom: 9px;
+}

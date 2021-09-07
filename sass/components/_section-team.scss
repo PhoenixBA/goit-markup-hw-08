@@ -1,0 +1,95 @@
+.section-team {
+    background-color: $second-title-color;
+    padding: 94px 0;
+}
+.section-team__title {
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.team-set {
+    display: flex;
+    padding-left: 0;
+}
+
+.team-set__item {
+    width: 270px;
+    box-shadow: $card-shadow;
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-child) {
+        margin-right: $card-set-gap;
+    }
+}
+.team-content {
+    background-color: $white-title-color;
+    padding: 30px;
+}
+
+.team-content__title {
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+.team-content__text {
+    color: $title-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.team-content__set {
+    display: flex;
+    padding: 0;
+    margin-top: 16px;
+}
+.team-content__item {
+    width: 44px;
+    height: 44px;
+    
+    display: flex;
+    border-radius: 50%;
+    
+    transition: background-color $time-function;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+    &:focus, 
+    &:hover {
+        background-color: $accent-color;
+        
+    }
+}
+.team-content__link {
+    width: 44px;
+    height: 44px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+    &:focus svg,
+    &:hover svg {
+    fill: $white-title-color;
+    }
+    & svg {
+    transition: fill $time-function;
+    }
+}
+
+.instagram, .twitter, .facebook, .linkedin,
+.Logo1, .Logo2, .Logo3, .Logo4, .Logo5, .Logo6 {
+    fill: $icon-color;
+    
+}
+
