@@ -50,12 +50,6 @@ img {
   padding: 94px 0;
 }
 
-/*.section:not(:first-child) {
-    padding-bottom: 0;
-}
-.section:last-child {
-    padding-bottom: 94px;
-}*/
 .footer-address__logo {
   color: #FFFFFF;
   font-family: Raleway, sans-serif;
@@ -151,10 +145,7 @@ img {
   background-color: #2196F3;
 }
 
-/*.footer-bloc__item:hover,
-.footer-bloc__item:focus {
-    background-color: $accent-color;
-}*/
+
 .footer-bloc__link {
   width: 44px;
   height: 44px;
@@ -227,9 +218,7 @@ img {
   background-color: #188CE8;
 }
 
-/*.footer-thumb__button:hover {
-    background-color: $second-accent-color;
-}*/
+
 .footer-thumb__send {
   margin-left: 10px;
 }
