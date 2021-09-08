@@ -1,23 +1,21 @@
-.visually-hidden {
+.section-title__visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
     border: 0;
     padding: 0;
+    color: $logo-text-color;
 
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.offer-title {
-    color: $logo-text-color;
+.section-not__padding-bottom {
+    padding-bottom: 0;
 }
 
-.section-special {
-    padding: 94px 0 0;
-}
 .special-set {
     padding: 0;
     display: flex;
@@ -45,7 +43,7 @@
     line-height: 1.7;
 }
 
-.special-icon {
+.special-set__icon {
     width: 270px;
     height: 120px;
     background-color: $second-title-color;

@@ -1,8 +1,4 @@
-.section-client {
-    padding: 94px 0;
-}
-
-.section-client__title {
+.section__title {
     color: $primary-text-color;
     font-weight: 700;
     font-size: 36px;
@@ -11,16 +7,16 @@
     margin-bottom: 50px;
 }
 
-.section-client__set {
+.client {
     display: flex;
     padding-left: 0;
 }
 
-.section-client__item:not(:last-child) {
+.client__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.section-client__item {
+.client__item {
     border: 1px solid $icon-color;
     border-radius: 4px;
     width: 270px;
@@ -37,7 +33,7 @@
     border-color: $accent-color;
     }
 }
-.section-client__link {
+.client__link {
     width: 100%;
     height: 100%;
     display: flex;
@@ -52,5 +48,9 @@
     & svg {
     transition: fill $time-function;
     }
+}
+.client__icon {
+    fill: $icon-color;
+    
 }
 

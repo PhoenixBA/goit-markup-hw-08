@@ -1,4 +1,6 @@
 .header-nav__link {
+    position: relative;
+
     color: $primary-text-color;
     cursor: pointer;
     font-weight: 500;
@@ -8,23 +10,22 @@
     padding: 32px 0;
     display: block;
 
-    position: relative;
-
     transition: color $time-function;
+    &:hover,
+    &:focus,
+    &.header-nav-link__current {
+    color: $accent-color;
+    }
+    
 }
 .header-nav {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
 
-    & :hover,
-    & :focus,
-    & .current {
-    color: $accent-color;
-    }
 }
 
-.header-nav__link::after{
+.header-nav-link__current::after{
     position: absolute;
     opacity: 0;
     content: '';
@@ -36,16 +37,12 @@
     background-color: $accent-color;
 
     transition: opacity $time-function;
-
+    
 }
-
-.header-nav__link.current::after {
+.header-nav-link__current::after {
     display: block;
     opacity: 1;
-}
-.header-nav:active { 
-    color: $white-title-color;
-    background-color: $accent-color;  
+    
 }
 .section-header {
     border-bottom: 1px solid $header-border;

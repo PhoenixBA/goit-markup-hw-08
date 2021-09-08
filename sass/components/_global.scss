@@ -44,3 +44,12 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+.section {
+    padding: 94px 0;
+}
+/*.section:not(:first-child) {
+    padding-bottom: 0;
+}
+.section:last-child {
+    padding-bottom: 94px;
+}*/
