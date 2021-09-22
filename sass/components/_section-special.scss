@@ -1,3 +1,4 @@
+
 .section-title__visually-hidden {
     position: absolute;
     width: 1px;
@@ -18,13 +19,13 @@
 
 .special-set {
     padding: 0;
-    display: flex;
 }
+   
 .special-set__item:not(:last-child) {
-    margin-right: $card-set-gap;
+    margin-bottom: $card-set-gap;
 }
 .special-set__item {
-    width: 270px;   
+    width: 450px;   
 }
 
 .special-set__title {
@@ -34,7 +35,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.1;
 }
 .special-set__text {
     color: $title-text-color;
@@ -44,7 +45,7 @@
 }
 
 .special-set__icon {
-    width: 270px;
+    width: 450px;
     height: 120px;
     background-color: $second-title-color;
     padding: 0px;
@@ -54,3 +55,4 @@
     align-items: center;
     justify-content: space-evenly;
 }
+

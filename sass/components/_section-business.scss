@@ -1,11 +1,11 @@
 .section-business {
-    max-width: 1600px;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
 
     background-color: $footer-accent-color;
     text-align: center;
-    padding: 200px 0;
+    padding: 118px 0;
     
     background-size: cover;
     background-position: center;
@@ -20,13 +20,13 @@
 
 .section-business__title {
     margin-bottom: 30px;
-    max-width: 696px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     color: $white-title-color;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;  
+    font-size: 26px;
+    line-height: 1.6;  
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -50,4 +50,8 @@
     background-color: $second-accent-color;
     }
 }
+
+
+
+
 

@@ -4,6 +4,10 @@
     padding: 0;
     margin: 0;
     margin-left: auto;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 .header-contact__item:not(:last-child) {
     margin-right: 50px;

@@ -1,7 +1,8 @@
 .filter {
     display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    
     padding: 0;
 
 }
@@ -32,4 +33,5 @@
 
 .filter__item:not(:last-child) {
     margin-right: 8px;
+    margin-bottom: 15px;
 }

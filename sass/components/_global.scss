@@ -16,6 +16,7 @@ body {
     color: $primary-text-color;
 }
 
+
 a {
     text-decoration: none;
  }
@@ -38,18 +39,17 @@ img {
 }
 
 .container {
-    width: 1200px;
+    
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
 }
 .section {
-    padding: 94px 0;
+      padding: 60px 0;
 }
-/*.section:not(:first-child) {
-    padding-bottom: 0;
-}
-.section:last-child {
-    padding-bottom: 94px;
-}*/
+

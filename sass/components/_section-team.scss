@@ -1,28 +1,31 @@
 .section-background {
     background-color: $second-title-color;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+}
+.team-set {
+    padding-left: 0;
 }
 
 .section__title {
     color: $primary-text-color;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 0.8;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.team-set {
-    display: flex;
-    padding-left: 0;
-}
 
 .team-set__item {
-    width: 270px;
+    width: 450px;
     box-shadow: $card-shadow;
     border-radius: 0px 0px 4px 4px;
 
     &:not(:last-child) {
-        margin-right: $card-set-gap;
+        margin-bottom: $card-set-gap;
     }
 }
 .team-set__box {
@@ -34,14 +37,14 @@
     color: $primary-text-color;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 0.8;
     text-align: center;
 }
 .team-set__text {
     color: $title-text-color;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 0.8;
     margin-top: 10px;
     text-align: center;
 }
@@ -51,6 +54,8 @@
     display: flex;
     padding: 0;
     margin-top: 16px;
+    justify-content: center;
+    align-items: center;
 }
 .social__item {
     width: 44px;
@@ -87,6 +92,8 @@
     fill: $icon-color;
     transition: fill $time-function;
 }
+
+
 
 
 
