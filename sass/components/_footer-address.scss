@@ -8,8 +8,8 @@
     color: $white-title-color;
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     margin-bottom: 20px;
     display: block;
 }
@@ -35,4 +35,18 @@
 
 .footer-address__item:not(:last-child) {
     margin-bottom: 9px;
+}
+@media screen and (min-width: 1200px) {
+    .section-footer .container {
+        display: flex;
+        align-items: baseline;
+    }
+    .footer-tablet {
+        display: flex;
+        align-items: baseline;
+        margin-right: 93px;
+    }
+    .footer-address {
+        margin-right: 60px;
+    }
 }

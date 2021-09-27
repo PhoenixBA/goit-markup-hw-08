@@ -1,23 +1,77 @@
+.mobile-link__phone {
+
+font-weight: 500;
+font-size: 34px;
+line-height: 1.17;
+letter-spacing: 0.02em;
+color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+    .header-contact {
+        padding: 0;
+        margin-left: 83px;
+    }
+    .mobile-position {
+        display: flex;
+        align-items: center;
+    }
+    .header-contact__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+.header-contact__item {
+    margin-top: 32px;
+}
 .header-contact {
     display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    margin-left: auto;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    }
+}
 
-    @media screen and (max-width: 1199px) {
+.mobile-link__mail {
+    
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+.mobile-socials {
+    margin-top: 64px;
+    margin-left: 40px;
+
+    @media  screen and (min-width: 768px) {
         display: none;
     }
 }
-.header-contact__item:not(:last-child) {
-    margin-right: 50px;
+
+.mobile-socials__link:not(:last-child) {
+    padding-right: 10px;
 }
+.mobile-socials__link:not(:last-child) {
+    border-right: 1px solid rgba(33,33,33,0.2);
+}
+.mobile-socials__link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
 .header-contact__link {
     color: $title-text-color;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     display: flex;
     align-items: center;
@@ -28,12 +82,12 @@
     &:focus {
     color: $accent-color;
     }
-}
+ }
 
 .header-contact__item:hover .header-contact__icon,
 .header-contact__item:focus .header-contact__icon {
     fill: $accent-color;
-}
+   }
 
 .header-contact__icon {
     padding: 0;
@@ -42,7 +96,7 @@
     fill: $title-text-color;
     
     transition: fill $time-function;
-}
+   }
 .header-contact__icon {
     padding: 0;
     margin-right: 10px;
@@ -50,4 +104,22 @@
     fill: $title-text-color;
     
     transition: fill $time-function;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+    .header-contact {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+
+    }
+    .header-contact__item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    .header-contact__link {
+        font-size: 14px;
+        line-height: 1.16;
+    }
 }

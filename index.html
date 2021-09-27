@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
@@ -16,28 +16,45 @@
         
     <header class="section-header">
         <div class="container">
-        <nav class="nav">
             <a href="./portfolio.html" class="logo"><span class="web-logo">Web</span>Studio</a>
+            <button type="button" class="mobile__menu-open js-open-menu is-open" aria-expanded="false" aria-controls="mobile__menu">
+                <svg width="40" height="40" aria-label="Кнопка мобильного меню">
+                    <use class="mobile__icon-menu" href="./images/symbol-defs.svg#menu_40px" ></use>
+                </svg>
+            </button>
+            <div class="mobile__container js-menu-container" id="mobile__menu">
+                <button type="button" class="mobile__menu-close js-close-menu">
+                    <svg width="40" height="40" aria-label="Кнопка мобильного меню">
+                        <use class="mobile__icon-close" href="./images/symbol-defs.svg#close_40px"></use>
+                    </svg>
+                </button>
             <ul class="header-nav">
                 <li class="header-nav__item"><a href="./index.html" class="header-nav__link header-nav-link__current">Студия</a></li>
                 <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link">Портфолио</a></li>
                 <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
             </ul>
-            </nav>
+            <div class="mobile-position">
             <ul class="header-contact">
                 <li class="header-contact__item">
-                    
-                    <a href="mailto:info@devstudio.com" class="header-contact__link">
+                    <a href="mailto:info@devstudio.com" class="header-contact__link mobile-link__mail">
                         <svg class="header-contact__icon" width="16" height="12" >
                         <use href="./images/symbol-defs.svg#envelope"></use>
                         </svg>info@devstudio.com</a></li>
-                <li class="header-contact__item">
-                    
-                    <a href="tel:+380961111111"  class="header-contact__link"> 
+                <li class="header-contact__item"> 
+                    <a href="tel:+380961111111"  class="header-contact__link mobile-link__phone"> 
                         <svg class="header-contact__icon" width="10" height="16" >
                         <use href="./images/symbol-defs.svg#smartphone"></use>
-                        </svg>(096) 111-11-11</a></li>
+                        </svg>+38 096 111 11 11</a></li>
             </ul>
+             </div>
+            <div class="mobile-socials">
+                <a class="mobile-socials__link" href="#">Instagram</a>
+                <a class="mobile-socials__link" href="#">Twitter</a>
+                <a class="mobile-socials__link" href="#">Facebook</a>
+                <a class="mobile-socials__link" href="#">LinkedIn</a>
+            </div>
+
+            </div>
             </div>
     </header>
     <!--Линия с кнопкой-->
@@ -89,27 +106,36 @@
             </div>
         </section>
         <!--Чем мы занимаемся-->
-        <section class="section">
-        <div class="container container__display-none">
+        <section class="section section-work">
+        <div class="container">
             <h2 class="section__title">Чем мы занимаемся</h2>
             
         
         <ul class="work-thumb">
             <li class="work-thumb__item">
             <div class="work-thumb__bloc">
-              <img width="370" height="294" src="./images/img.jpg" alt="рабочая программа">
+                <picture>
+                    <source srcset="./images/img1@1x.jpg 1x, ./images/img1@2x.jpg 2x" media="(min-width: 100px)" sizes="33vw" type="image/jpg"/>
+                    <img src="./images/img1@1x.jpg" alt="рабочая программа"/>
+                </picture>
               <h3 class="work-thumb__text">Десктопные приложения</h3>
             </div>
             </li>
             <li class="work-thumb__item">
             <div class="work-thumb__bloc">
-              <img width="370" height="294" src="./images/img1.jpg" alt="разработка умного телефона">
+                <picture>
+                    <source srcset="./images/img2@1x.jpg 1x, ./images/img2@2x.jpg 2x" media="(min-width: 100px)" sizes="33vw" type="image/jpg"/>
+                    <img src="./images/img2@1x.jpg" alt="разработка умного телефона"/>
+                </picture>
               <h3 class="work-thumb__text">Мобильные приложения</h3>
             </div>
             </li>
             <li class="work-thumb__item">
             <div class="work-thumb__bloc">
-              <img width="370" height="294" src="./images/box3.jpg" alt="работа с цветами">
+                <picture>
+                    <source srcset="./images/img3@1x.jpg 1x, ./images/img3@2x.jpg 2x" media="(min-width: 100px)" sizes="33vw" type="image/jpg"/>
+                    <img src="./images/img3@1x.jpg" alt="работа с цветами"/>
+                </picture>
               <h3 class="work-thumb__text">Дизайнерские решения</h3>
             </div>
             </li>
@@ -123,9 +149,12 @@
             <h2 class="section__title">Наша команда</h2> 
             <ul class="team-set">
             <li class="team-set__item">
-             
-                   <img width="270" height="260" src="./images/teamcard1.jpg" alt="Игорь Демьяненко">  
-                   
+                <picture>
+                    <source srcset="./images/1img1x.jpg 1x, ./images/1img@2x.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                    <source srcset="./images/1img1x.jpg 1x, ./images/1img@2x.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                    <source srcset="./images/1img1x.jpg 1x, ./images/1img@2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw" type="image/jpg"/>
+                    <img src="./images/1img1x.jpg" alt="Игорь Демьяненко"/>
+                </picture>
               <div class="team-set__box">
                 <h3 class="team-set__title">Игорь Демьяненко</h3>
                 <p class="team-set__text">Product Designer</p>
@@ -159,9 +188,12 @@
             </li>
 
             <li class="team-set__item">
-                    
-                        <img width="270" height="260" src="./images/teamcard2.jpg" alt="Ольга Репина">  
-                        
+                <picture>
+                    <source srcset="./images/2img1x.jpg 1x, ./images/2img@2x.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                    <source srcset="./images/2img1x.jpg 1x, ./images/2img@2x.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                    <source srcset="./images/2img1x.jpg 1x, ./images/2img@2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw" type="image/jpg"/>
+                    <img src="./images/2img1x.jpg" alt="Ольга Репина"/>
+                </picture>
                <div class="team-set__box">
                 <h3 class="team-set__title">Ольга Репина</h3>
                 <p class="team-set__text">Frontend Developer</p>
@@ -195,9 +227,12 @@
             </li>
 
             <li class="team-set__item">
-                    
-                        <img width="270" height="260" src="./images/teamcard3.jpg" alt="Николай Тарасов">  
-                        
+                <picture>
+                    <source srcset="./images/3img1x.jpg 1x, ./images/3img@2x.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                    <source srcset="./images/3img1x.jpg 1x, ./images/3img@2x.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                    <source srcset="./images/3img1x.jpg 1x, ./images/3img@2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw" type="image/jpg"/>
+                    <img src="./images/3img1x.jpg" alt="Николай Тарасов"/>
+                </picture>
                 <div class="team-set__box">
                  <h3 class="team-set__title">Николай Тарасов</h3>
                  <p class="team-set__text">Marketing</p>
@@ -232,9 +267,12 @@
             </li>
 
             <li class="team-set__item">
-                    
-                        <img width="270" height="260" src="./images/teamcard4.jpg" alt="Михаил Ермаков">  
-                        
+                <picture>
+                    <source srcset="./images/4img1x.jpg 1x, ./images/4img@2x.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                    <source srcset="./images/4img1x.jpg 1x, ./images/4img@2x.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                    <source srcset="./images/4img1x.jpg 1x, ./images/4img@2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw" type="image/jpg"/>
+                    <img src="./images/4img1x.jpg" alt="Михаил Ермаков"/>
+                </picture>
                 <div class="team-set__box">
                  <h3 class="team-set__title">Михаил Ермаков</h3>
                  <p class="team-set__text">UI Designer</p>
@@ -324,6 +362,7 @@
     <!--Подвал-->
 <footer class="section-footer">
         <div class="container">
+            <div class="footer-tablet">
             <div class="footer-address"> 
             <a href="./portfolio.html" class="footer-address__logo"> <span class="web-logo">Web</span>Studio</a>
         
@@ -334,38 +373,39 @@
         </ul>
         </div>
         
-        <div class="footer-bloc">
-            <h3 class="footer-bloc__title">Присоединяйтесь</h3>
-        <ul class="footer-bloc__set">
-            <li class="footer-bloc__item">
-                <a class="footer-bloc__link" href="#">
+        <div class="footer-social">
+            <h3 class="footer-social__title">Присоединяйтесь</h3>
+        <ul class="footer-social__set">
+            <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
                     <svg class="instagram" width="20" height="20" >
                         <use href="./images/symbol-defs.svg#instagram"></use>
                     </svg>
                 </a></li>
-            <li class="footer-bloc__item">
-                <a class="footer-bloc__link" href="#">
+            <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
                     <svg class="twitter" width="20" height="20" >
                         <use href="./images/symbol-defs.svg#twitter"></use>
                     </svg>
                 </a></li>
-            <li class="footer-bloc__item">
-                <a class="footer-bloc__link" href="#">
+            <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
                     <svg class="facebook" width="20" height="20" >
                         <use href="./images/symbol-defs.svg#facebook"></use>
                     </svg>
                 </a></li>
-            <li class="footer-bloc__item">
-                <a class="footer-bloc__link" href="#">
+            <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
                     <svg class="linkedin" width="20" height="20" >
                         <use href="./images/symbol-defs.svg#linkedin"></use>
                     </svg>
                 </a></li>
         </ul>
         </div>
-    <div class="footer-bloc">
-            <h3 class="footer-bloc__title">Подпишитесь на рассылку</h3>
-        <form class="footer-thumb">
+    </div>
+    <div class="footer-thumb">
+            <h3 class="footer-thumb__title">Подпишитесь на рассылку</h3>
+        <form class="footer-thumb__form">
             <input class="footer-thumb__input" type="email" name="mail" placeholder="E-mail">
             <button class="footer-thumb__button" type="submit">Подписаться
                 <svg class="footer-thumb__send" width="24" height="24" >
@@ -428,6 +468,11 @@
      </form>
     </div>
 </div>
+<script defer
+ src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+ integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+ crossorigin="anonymous"> 
+</script>
 <script src="./js/modal.js"></script> 
 <script src="./js/mobile-menu.js"></script>
 </body>

@@ -8,16 +8,11 @@
 }
 
 .client {
-    box-sizing: border-box;
-    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: calc(100% / 2);
-    margin-right: -30px;
-    margin-bottom: -30px;
 }
-
 
 .client__item {
     border: 1px solid $icon-color;
@@ -27,9 +22,6 @@
     
     cursor: pointer;
     
-    margin-right: 30px;
-    margin-bottom: 30px;
-
     transition: border-color $time-function;
 
     &:hover,
@@ -57,4 +49,19 @@
     fill: $icon-color;
     
 }
-
+@media screen and (min-width: 768px) {
+    .client{
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .client__item {
+        width: 226px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .client {
+       grid-template-columns: repeat(6, 1fr);
+    }
+    .client__item {
+        width: 170px;
+    }
+}

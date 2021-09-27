@@ -1,9 +1,6 @@
 .section-background {
     background-color: $second-title-color;
 
-    @media screen and (min-width: $mobile) {
-        width: $mobile;
-    }
 }
 .team-set {
     padding-left: 0;
@@ -20,7 +17,7 @@
 
 
 .team-set__item {
-    width: 450px;
+    
     box-shadow: $card-shadow;
     border-radius: 0px 0px 4px 4px;
 
@@ -93,7 +90,21 @@
     transition: fill $time-function;
 }
 
-
+@media screen and (min-width: 768px) {
+    .team-set {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .team-set__item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .team-set {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 
 

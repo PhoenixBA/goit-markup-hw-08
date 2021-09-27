@@ -1,12 +1,23 @@
 .logo {
-    margin-right: 93px;
+    
     color: $logo-text-color;
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 15px 0;
 }
 
 .web-logo {
     color: $accent-color;
+}
+@media screen and (min-width: 768px) {
+    .logo {
+        margin-right: 88px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .logo {
+        margin-right: 93px;
+    }
 }

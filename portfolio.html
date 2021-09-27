@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
@@ -14,36 +14,49 @@
 <body>
     <!--Шапка-->
 
-    <header>
-      <section class="section-header">
-        <div class="container">
-        <nav class="nav">
-        <a href="./index.html" class="logo"> <span class="web-logo">Web</span>Studio</a>
-     <ul class="header-nav">
-        <li class="header-nav__item"><a href="./index.html" class="header-nav__link">Студия</a></li>
-        <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link header-nav-link__current">Портфолио</a></li>
-        <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
-    </ul>
-</nav>
+    <header class="section-header">
+      <div class="container">
+          <a href="./portfolio.html" class="logo"><span class="web-logo">Web</span>Studio</a>
+          <button type="button" class="mobile__menu-open js-open-menu is-open" aria-expanded="false" aria-controls="mobile__menu">
+              <svg width="40" height="40" aria-label="Кнопка мобильного меню">
+                  <use class="mobile__icon-menu" href="./images/symbol-defs.svg#menu_40px" ></use>
+              </svg>
+          </button>
+          <div class="mobile__container js-menu-container" id="mobile__menu">
+              <button type="button" class="mobile__menu-close js-close-menu">
+                  <svg width="40" height="40" aria-label="Кнопка мобильного меню">
+                      <use class="mobile__icon-close" href="./images/symbol-defs.svg#close_40px"></use>
+                  </svg>
+              </button>
+          <ul class="header-nav">
+              <li class="header-nav__item"><a href="./index.html" class="header-nav__link">Студия</a></li>
+              <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link  header-nav-link__current">Портфолио</a></li>
+              <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
+          </ul>
+          <div class="mobile-position">
+          <ul class="header-contact">
+              <li class="header-contact__item">
+                  <a href="mailto:info@devstudio.com" class="header-contact__link mobile-link__mail">
+                      <svg class="header-contact__icon" width="16" height="12" >
+                      <use href="./images/symbol-defs.svg#envelope"></use>
+                      </svg>info@devstudio.com</a></li>
+              <li class="header-contact__item">
+                  <a href="tel:+380961111111"  class="header-contact__link mobile-link__phone"> 
+                      <svg class="header-contact__icon" width="10" height="16" >
+                      <use href="./images/symbol-defs.svg#smartphone"></use>
+                      </svg>+38 096 111 11 11</a></li>
+          </ul>
+        </div>
+          <div class="mobile-socials">
+              <a class="mobile-socials__link" href="#">Instagram</a>
+              <a class="mobile-socials__link" href="#">Twitter</a>
+              <a class="mobile-socials__link" href="#">Facebook</a>
+              <a class="mobile-socials__link" href="#">LinkedIn</a>
+          </div>
 
-<ul class="header-contact">
-    <li class="header-contact__item">
-      
-      <a href="mailto:info@devstudio.com" class="header-contact__link"> 
-        <svg class="header-contact__icon" width="16" height="12" >
-        <use href="./images/symbol-defs.svg#envelope"></use>
-       </svg>info@devstudio.com</a></li>
-    <li class="header-contact__item">
-      
-      <a href="tel:+380961111111"  class="header-contact__link"> 
-        <svg class="header-contact__icon" width="10" height="16" >
-        <use href="./images/symbol-defs.svg#smartphone"></use>
-        </svg>(096) 111-11-11</a></li>
-</ul>
-
-</div>    
-</section>
-</header>
+          </div>
+          </div>
+  </header>
 <!--Герой-->
 <main>
   <section class="section">
@@ -61,7 +74,13 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img11.jpg" alt="Ноутбук">
+                <picture>
+                  <source srcset="./images/gero1x1.jpg 1x, ./images/gero@2x1.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x1.jpg 1x, ./images/gero@2x1.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x1.jpg 1x, ./images/gero@2x1.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x1.jpg" alt="Ноутбук" height="294"/>
+              </picture>
+                
               <p class="gero-list__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
               </div>
               <div class="gero-content">
@@ -74,7 +93,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" height="294" src="./images/img12.jpg" alt="Баскетболисты">
+                <picture>
+                  <source srcset="./images/gero1x2.jpg 1x, ./images/gero@2x2.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x2.jpg 1x, ./images/gero@2x2.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x2.jpg 1x, ./images/gero@2x2.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x2.jpg" alt="Баскетболисты" height="294"/>
+              </picture>
                 <p class="gero-list__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi et corrupti dolorum, aliquid quod possimus ex deleniti voluptatem expedita a reprehenderit aspernatur cupiditate iusto recusandae quia neque repellat modi numquam?</p>
               </div>
               <div class="gero-content">
@@ -87,7 +111,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img13.jpg" alt="Рыбка">
+                <picture>
+                  <source srcset="./images/gero1x3.jpg 1x, ./images/gero@2x3.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x3.jpg 1x, ./images/gero@2x3.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x3.jpg 1x, ./images/gero@2x3.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x3.jpg" alt="Рыбка" height="294"/>
+              </picture>
                 <p class="gero-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis dolor porro magni, ratione nostrum error distinctio sunt expedita! Accusamus numquam corrupti veniam labore rerum saepe, vitae nisi placeat animi.</p>
               </div>
               <div class="gero-content">
@@ -100,7 +129,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img14.jpg" alt="Наушники">
+                <picture>
+                  <source srcset="./images/gero1x4.jpg 1x, ./images/gero@2x4.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x4.jpg 1x, ./images/gero@2x4.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x4.jpg 1x, ./images/gero@2x4.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x4.jpg" alt="Наушники" height="294"/>
+              </picture>
                 <p class="gero-list__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, neque iusto iste nulla nobis culpa quis cupiditate sed aperiam quae nesciunt voluptas quod ipsa omnis ullam eum, quam cum dicta?</p>
               </div>
               <div class="gero-content">
@@ -113,7 +147,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img15.jpg" alt="Боксы">
+                <picture>
+                  <source srcset="./images/gero1x5.jpg 1x, ./images/gero@2x5.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x5.jpg 1x, ./images/gero@2x5.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x5.jpg 1x, ./images/gero@2x5.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x5.jpg" alt="Боксы" height="294"/>
+                </picture>
                 <p class="gero-list__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis error unde inventore illo a consequuntur placeat! Quae, molestiae laudantium quaerat animi quas ad placeat, aspernatur facere tenetur nostrum nemo. Inventore.</p>
               </div>
               <div class="gero-content">
@@ -126,7 +165,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img16.jpg" alt="Монитор">
+                <picture>
+                  <source srcset="./images/gero1x6.jpg 1x, ./images/gero@2x6.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x6.jpg 1x, ./images/gero@2x6.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x6.jpg 1x, ./images/gero@2x6.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x6.jpg" alt="Монитор" height="294"/>
+              </picture>
                 <p class="gero-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aut nisi ipsum repellendus dolores perferendis necessitatibus dolore temporibus amet ad reiciendis ratione obcaecati, totam autem minima explicabo. Molestias, praesentium nostrum!</p>
               </div>
               <div class="gero-content">
@@ -139,7 +183,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img17.jpg" alt="Журнал">
+                <picture>
+                  <source srcset="./images/gero1x7.jpg 1x, ./images/gero@2x7.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x7.jpg 1x, ./images/gero@2x7.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x7.jpg 1x, ./images/gero@2x7.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x7.jpg" alt="Журнал" height="294"/>
+              </picture>
                 <p class="gero-list__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus officia iure dignissimos commodi illum cupiditate tempore aliquam recusandae, dolorum omnis deserunt praesentium quos numquam nihil, modi asperiores perferendis animi corporis.</p>
               </div>
               <div class="gero-content">
@@ -152,7 +201,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
              <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img18.jpg" alt="Лейба">
+              <picture>
+                <source srcset="./images/gero1x8.jpg 1x, ./images/gero@2x8.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                <source srcset="./images/gero1x8.jpg 1x, ./images/gero@2x8.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                <source srcset="./images/gero1x8.jpg 1x, ./images/gero@2x8.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                <img src="./images/gero1x8.jpg" alt="Лейба" height="294"/>
+              </picture>
                 <p class="gero-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, architecto distinctio excepturi illum consectetur aspernatur sed ullam exercitationem tempore? Quas assumenda commodi et expedita ut doloribus mollitia est unde ullam!</p>
               </div>
              <div class="gero-content">
@@ -165,7 +219,12 @@
             <li class="gero-list__item">
               <a class="gero-list__link" href="#">
               <div class="gero-list__thumb">
-                <img width="370" height="294" src="./images/img19.jpg" alt="Ноутбук">
+                <picture>
+                  <source srcset="./images/gero1x9.jpg 1x, ./images/gero@2x9.jpg 2x" media="(max-width: 767px)" sizes="100vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x9.jpg 1x, ./images/gero@2x9.jpg 2x" media="(min-width: 768px)" sizes="50vw" type="image/jpg"/>
+                  <source srcset="./images/gero1x9.jpg 1x, ./images/gero@2x9.jpg 2x" media="(min-width: 1200px)" sizes="33vw" type="image/jpg"/>
+                  <img src="./images/gero1x9.jpg" alt="Ноутбук" height="294"/>
+              </picture>
                 <p class="gero-list__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem voluptatum corrupti, perferendis facere modi molestiae ipsum dolore enim odio magnam? Veniam est harum ullam laborum neque minus dolore labore fugit?</p>
               </div>
               <div class="gero-content">
@@ -182,6 +241,7 @@
 <!--Подвал-->
 <footer class="section-footer">
   <div class="container">
+      <div class="footer-tablet">
       <div class="footer-address"> 
       <a href="./portfolio.html" class="footer-address__logo"> <span class="web-logo">Web</span>Studio</a>
   
@@ -192,38 +252,39 @@
   </ul>
   </div>
   
-  <div class="footer-bloc">
-      <h3 class="footer-bloc__title">Присоединяйтесь</h3>
-  <ul class="footer-bloc__set">
-      <li class="footer-bloc__item">
-          <a class="footer-bloc__link" href="#">
+  <div class="footer-social">
+      <h3 class="footer-social__title">Присоединяйтесь</h3>
+  <ul class="footer-social__set">
+      <li class="footer-social__item">
+          <a class="footer-social__link" href="#">
               <svg class="instagram" width="20" height="20" >
                   <use href="./images/symbol-defs.svg#instagram"></use>
               </svg>
           </a></li>
-      <li class="footer-bloc__item">
-          <a class="footer-bloc__link" href="#">
+      <li class="footer-social__item">
+          <a class="footer-social__link" href="#">
               <svg class="twitter" width="20" height="20" >
                   <use href="./images/symbol-defs.svg#twitter"></use>
               </svg>
           </a></li>
-      <li class="footer-bloc__item">
-          <a class="footer-bloc__link" href="#">
+      <li class="footer-social__item">
+          <a class="footer-social__link" href="#">
               <svg class="facebook" width="20" height="20" >
                   <use href="./images/symbol-defs.svg#facebook"></use>
               </svg>
           </a></li>
-      <li class="footer-bloc__item">
-          <a class="footer-bloc__link" href="#">
+      <li class="footer-social__item">
+          <a class="footer-social__link" href="#">
               <svg class="linkedin" width="20" height="20" >
                   <use href="./images/symbol-defs.svg#linkedin"></use>
               </svg>
           </a></li>
   </ul>
   </div>
-<div class="footer-bloc">
-      <h3 class="footer-bloc__title">Подпишитесь на рассылку</h3>
-  <form class="footer-thumb">
+</div>
+<div class="footer-thumb">
+      <h3 class="footer-thumb__title">Подпишитесь на рассылку</h3>
+  <form class="footer-thumb__form">
       <input class="footer-thumb__input" type="email" name="mail" placeholder="E-mail">
       <button class="footer-thumb__button" type="submit">Подписаться
           <svg class="footer-thumb__send" width="24" height="24" >
@@ -234,5 +295,11 @@
 </div>
 </div>
 </footer>
+<script defer
+ src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+ integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+ crossorigin="anonymous"> 
+</script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>

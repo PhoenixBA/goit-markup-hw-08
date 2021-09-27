@@ -1,8 +1,8 @@
 .section-business {
-    max-width: 480px;
+    
     margin-left: auto;
     margin-right: auto;
-
+    height: 400px;
     background-color: $footer-accent-color;
     text-align: center;
     padding: 118px 0;
@@ -15,9 +15,69 @@
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
     ),
-    url(../images/Img6.jpg);  
+    url(../images/Header480@1x.jpg);  
+}
+@media not all, screen and (min-device-pixel-ratio: 1.5),
+screen and (min-resolution: 144dpi), 
+screen and (min-resolution: 1.5dppx) {
+    .section-business {
+        background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Header480@2x.jpg);
+
+    }
+}
+@media screen and (min-width: 768px) {
+    .section-business {
+        background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Header768@1x.jpg);
+    }
 }
 
+@media not all, screen and (min-width: 768px) and (min-device-pixel-ratio: 1.5), 
+screen and (min-width: 768px) and (min-resolution: 144dpi), 
+screen and (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .section-business {
+        background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Header768@2x.jpg);
+
+    }
+}
+@media screen and (min-width: 1200px) {
+    .section-business {
+        background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/header1200@1x.jpg);
+    }
+}
+
+@media not all, screen and (min-width: 1200px) and (min-device-pixel-ratio: 1.5), 
+screen and (min-width: 1200px) and (min-resolution: 144dpi), 
+screen and (min-width: 1200px) and (min-resolution: 1.5dppx) {
+    .section-business {
+        background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/header1200@2x.jpg);
+
+    }
+}
 .section-business__title {
     margin-bottom: 30px;
     max-width: 360px;
@@ -49,6 +109,18 @@
     &:focus {
     background-color: $second-accent-color;
     }
+}
+@media screen and (min-width: 1200px) {
+    .section-business {
+        height: 600px;
+        max-width: 1600px;
+        padding-top: 200px;
+    }
+    .section-business__title {
+        max-width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+        }
 }
 
 

@@ -33,5 +33,22 @@
 
 .filter__item:not(:last-child) {
     margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+.filter__item:nth-child(-n+3) {
     margin-bottom: 15px;
+   }
+}
+@media screen and (min-width: 768px) {
+    .filter {
+        justify-content: center;
+        margin-bottom: $card-set-gap;
+
+    }
+}
+@media screen and (min-width: 1200px) {
+    .filter {
+        margin-bottom: 34px;
+    }
 }

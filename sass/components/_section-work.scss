@@ -1,54 +1,52 @@
-            .section__title {
-            color: $primary-text-color;
-            font-weight: 700;
-            font-size: 36px;
-            line-height: 1.17;
-            text-align: center;
-            margin-bottom: 50px;
+.section__title {
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-    }
-    .container__display-none {
-        @media screen and (max-width: 1199px) {
-            display: none;
-        }
-    }
-        
-        .work-thumb {
-            display: flex;
-            padding-left: 0;
+.work-thumb {
+    display: flex;
+    padding-left: 0;
+}
 
-        }
-        
-        .work-thumb__item {
-            width: 370px;
-        
-            &:not(:last-child) {
-                margin-right: $card-set-gap;
-            }
-        }
-        
-        .work-thumb__bloc {
-            position: relative;
-        
-        }
-        .work-thumb__text {
-            position: absolute;
-            bottom: 0;
-        
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        
-            height: 70px;
-            width: 370px;
-        
-            font-family: inherit;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1.14;
-            letter-spacing: 0.03em;
-            text-align: center;
-            text-transform: uppercase;
-            color: $white-title-color;
-            background-color: $back-work-color;
-        }
+.work-thumb__item {
+    width: 370px;
+
+    &:not(:last-child) {
+        margin-right: $card-set-gap;
+    }
+}
+
+.work-thumb__bloc {
+    position: relative;
+
+}
+.work-thumb__text {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70px;
+    width: 370px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white-title-color;
+    background-color: $back-work-color;
+}
+ @media screen and (max-width: 1199px) {
+     .section-work {
+         display: none;
+     }
+ }
