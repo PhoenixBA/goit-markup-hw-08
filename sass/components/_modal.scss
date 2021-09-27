@@ -181,8 +181,7 @@
 .form-policy__icon {
     position: absolute;
     opacity: 0;
-    
-    
+
     transition: opacity $time-function;
 }
 
@@ -211,7 +210,6 @@
 }
 
 .form-policy__link {
-
     font-family: inherit;
     font-weight: 400;
     font-size: 12px;
@@ -247,5 +245,11 @@
 .modal__button:hover,
 .modal__button:focus {
     background-color: $second-accent-color;
-    
+}
+
+@media screen and (min-width: 1200px) {
+    .modal {
+        width: 528px;
+        height: 581px;
+    }
 }
