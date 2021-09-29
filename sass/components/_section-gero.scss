@@ -4,7 +4,6 @@
 
 .gero-list__link {
     display: block;
-
     transition: box-shadow $time-function;
 
     &:focus,
@@ -68,7 +67,7 @@
     line-height: 1.9;
 }
 @media screen and (max-width: 767px) {
-    .gero-list__item {
+    .gero-list__item:not(:last-child) {
         margin-bottom: 30px;
     }
 }
@@ -77,6 +76,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+    }
+    .gero-list__link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
     
 }
